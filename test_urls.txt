@@ -1,0 +1,38 @@
+# URL evaluation fixture
+# Labels are intended for offline model testing only. Do not visit these URLs.
+# Replace the phishing examples with rows from a downloaded PhishTank/UNB CIC export
+# before reporting them as live-feed observations.
+
+PHISHING URLS
+1. http://secure-login-verification.example.invalid/account
+2. http://paypal-confirmation.example.invalid/signin
+3. http://microsoft365-security.example.invalid/verify
+4. http://appleid-recovery.example.invalid/login
+5. http://banking-alert.example.invalid/confirm
+6. http://account-update.example.invalid/webscr
+7. http://invoice-payment.example.invalid/auth
+8. http://cloud-storage-share.example.invalid/document
+9. http://mailbox-quota.example.invalid/validate
+10. http://wallet-support.example.invalid/unlock
+11. http://delivery-fee.example.invalid/track
+12. http://password-expired.example.invalid/reset
+13. http://tax-refund.example.invalid/claim
+14. http://social-media-check.example.invalid/session
+15. http://corporate-portal.example.invalid/sso
+
+LEGITIMATE URLS
+1. https://www.google.com
+2. https://www.microsoft.com
+3. https://www.apple.com
+4. https://www.amazon.com
+5. https://www.wikipedia.org
+6. https://www.python.org
+7. https://www.mozilla.org
+8. https://www.github.com
+9. https://www.un.org
+10. https://www.nasa.gov
+11. https://www.bbc.com
+12. https://www.reuters.com
+13. https://www.ibm.com
+14. https://www.nytimes.com
+15. https://www.linkedin.com

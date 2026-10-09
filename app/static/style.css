@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root { --ink:#17211b; --muted:#647268; --paper:#f4f1e8; --line:#cad1c7; --green:#2e6b4f; --red:#a23d35; --yellow:#e4b84a; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; color:var(--ink); font-family:'Space Grotesk', sans-serif; background:radial-gradient(circle at 90% 0%, #d8e6d6 0, transparent 32%), linear-gradient(135deg, #f4f1e8 0%, #e9eee5 100%); }
+.shell { width:min(920px, calc(100% - 40px)); margin:0 auto; padding:clamp(48px, 10vw, 112px) 0 32px; }
+.masthead { max-width:720px; margin-bottom:48px; }
+.eyebrow { margin:0 0 14px; color:var(--green); font:500 12px/1.2 'DM Mono', monospace; letter-spacing:0; }
+h1 { max-width:760px; margin:0; font-size:clamp(2.4rem, 6vw, 5.4rem); line-height:.98; letter-spacing:0; }
+.lede { margin:24px 0 0; max-width:540px; color:var(--muted); font-size:1.1rem; }
+.panel { border:1px solid var(--line); background:rgba(255,255,255,.65); padding:clamp(24px, 5vw, 48px); box-shadow:12px 12px 0 rgba(46,107,79,.1); }
+.panel-heading { display:flex; justify-content:space-between; align-items:start; gap:16px; margin-bottom:36px; }
+h2 { margin:0; font-size:clamp(1.5rem, 3vw, 2.3rem); }
+.status { padding:8px 10px; font:500 11px 'DM Mono', monospace; border:1px solid var(--line); white-space:nowrap; }
+.status.ready { color:var(--green); border-color:#87ad94; }.status.offline { color:#916c21; border-color:#d8bb6f; }
+label { display:block; margin-bottom:10px; font-size:.9rem; color:var(--muted); }
+.input-row { display:flex; gap:10px; } input { min-width:0; flex:1; border:1px solid var(--line); background:#fffdf7; padding:16px; color:var(--ink); font:16px 'DM Mono', monospace; } button { border:0; background:var(--green); color:#fff; padding:0 22px; font:600 15px 'Space Grotesk', sans-serif; cursor:pointer; } button:hover { background:#214d39; }
+.result { margin-top:28px; border-left:5px solid var(--green); padding:20px 22px; background:#fffdf7; }.result.phishing { border-color:var(--red); }.result.legitimate { border-color:var(--green); }.result.notice { border-color:var(--yellow); }.result.error { border-color:var(--red); color:var(--red); }.result.loading { color:var(--muted); }.result-label { display:block; margin-bottom:8px; font:500 13px 'DM Mono', monospace; }.result strong { font-size:1.6rem; }.result p { margin:10px 0 0; color:var(--muted); }
+footer { margin-top:24px; color:var(--muted); font:12px 'DM Mono', monospace; }
+@media (max-width:600px) { .shell { width:min(100% - 28px, 920px); } .input-row { flex-direction:column; } button { min-height:50px; } .panel-heading { flex-direction:column; } }

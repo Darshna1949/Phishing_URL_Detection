@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhishTransformer URL Analysis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <p class="eyebrow">PHISHTRANSFORMER / URL INTELLIGENCE</p>
+      <h1>Inspect a URL before it becomes a problem.</h1>
+      <p class="lede">{{ 'Character-level analysis powered by the trained CNN + Transformer model.' if model_available else 'Character-level URL screening with a transparent demo heuristic while the trained model is unavailable.' }}</p>
+    </header>
+    <section class="panel" aria-labelledby="analysis-title">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">LIVE ANALYSIS</p>
+          <h2 id="analysis-title">URL Analysis</h2>
+        </div>
+        <span class="status {{ 'ready' if model_available else 'offline' }}">{{ 'MODEL READY' if model_available else 'DEMO MODE' }}</span>
+      </div>
+      <form id="analysis-form">
+        <label for="url">URL to inspect</label>
+        <div class="input-row">
+          <input id="url" name="url" type="url" placeholder="https://example.com/login" required>
+          <button type="submit">Analyze URL <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+      <div id="result" class="result" hidden></div>
+    </section>
+    <footer>{{ 'Trained model predictions' if model_available else 'Demo heuristic only: train the notebook for model predictions' }}. Predictions are statistical signals, not a substitute for browsing security controls.</footer>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

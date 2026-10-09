@@ -1,0 +1,30 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Local environments and secrets
+.env
+.envrc
+.venv/
+venv/
+env/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Notebook and editor state
+.ipynb_checkpoints/
+.vscode/
+tempCodeRunnerFile.py
+
+# Test and coverage output
+.coverage
+htmlcov/
+.tox/
+.nox/
